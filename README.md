@@ -28,3 +28,11 @@ Data files for chromatin modifications are in folder /chromatin
 - File /chromatin/2489.H3K9.domains.duprm.bed is a bed file that contains regions where H3K9me3 occurs
 - File /chromatin/2489.H3K36.domains.duprm.bed is a bed file that contains regions where H3K36me2 occurs
 - File /chromatin/2489.euchromatin.bed is a bed file that contains regions of the genome where H3K9me3, H3K27me3 have been excluded
+
+## Trinucleotide count data
+Data files for trinucleotide counts for different regions of the genome
+- File Nc_trinuc_freq_whole_genome.txt contains trinucleotide counts over the whole genome
+- File Nc_trinuc_freq_euchromatin.txt contains trinucleotide counts for euchromatic regions
+- File Nc_trinuc_freq_centromere.txt contains trinucleotide counts for centromeric regions
+- File Nc_trinuc_freq_H3K27_exK9.txt contains trinucleotide counts for regions where only H3K27me3 occurs
+- File Nc_trinuc_freq_H3K9.txt contains trinucleotide counts for regions where H3K9me3 occurs
