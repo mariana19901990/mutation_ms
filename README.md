@@ -3,6 +3,21 @@ Data and scripts for manuscript: "Chromatin structure influences rate and spectr
 
 This was a fairly large and complex project. I've separated the different pipelines, input files, and analyses into different files.
 
+## Bioinformatics pipeline to map reads and call mutations
+
+We used a national supercluster (CSC) to process the short read sequencing data. The script files have been mainly written so that they work on the cluster. If you want to use them, you have to modify them so that they work in your environment. Nevertheless you can extract the GATK, BWA etc. commands and run them on your system.
+
+The script files are in folder /bioinf
+1. Map short reads to the reference genome: file /bioinf/mapping_cluster_all.sh contains the commands used for BWA and post processing of the files
+2. Use haplotypecaller in the GATK pipeline to call genotypes for each sample (GVCF file): file /bioinf/call_genotype.sh contains the haplotypecaller commands
+3. Consolidate the samples into a databse: file /bioinf/dbimport.sh contains the commands to make the database
+4. Jointly call genotypes from the sample database: file /bioinf/genotypeGVCF_array.sh contains commands to call genotypes jointly, chromsome by chromosome for parallelization purposes
+5. Postprocess the resulting VCF files: file /bioinf/postprocess_vcf.sh
+6. Then make an indexed database from the resulting VCF file using wormtable
+7. Filter mutations called by the GATK pipeline: file /bioinf/mutations_neuro_MA.py contains a python scripts that uses wormtable to filter for candidate mutations
+
+File /bioinf/retrieve.py contains a script that is called from the R-script MAanalysis.R that retrieves the trinucleotide context the mutation. Used the generated wormtable database 
+
 ## Estimating the number of mitoses
 
 The analysis scripts and data files for estimating the number of mitoses that the MA lines went through are in folder /mitoses
