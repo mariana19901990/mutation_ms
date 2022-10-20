@@ -19,4 +19,12 @@ The analysis scripts and data files for estimating the number of mitoses that th
 
 Folder /data contains .RData files that contain intermediate steps and results of statistical analyses.
 
-
+## Chromatin modification data
+Data files for chromatin modifications are in folder /chromatin
+- File /chromatin/duplicated.csv contains data about the duplicated regions defined by Wang et al. 2020
+- File /chromatin/centromeres.csv contains data about the centromere locations
+- File /chromatin/2489.H3K27.domains.duprm.bed is a bed file that contains regions where H3K27me3 occurs
+- File /chromatin/2489.H3K27_exK9.bed is a bed file that contains regions of H3K27me3, where regions overlapping H3K9me3 have been excluded
+- File /chromatin/2489.H3K9.domains.duprm.bed is a bed file that contains regions where H3K9me3 occurs
+- File /chromatin/2489.H3K36.domains.duprm.bed is a bed file that contains regions where H3K36me2 occurs
+- File /chromatin/2489.euchromatin.bed is a bed file that contains regions of the genome where H3K9me3, H3K27me3 have been excluded
