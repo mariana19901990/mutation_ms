@@ -1,7 +1,7 @@
 # mutation_ms
 Data and scripts for manuscript: "Chromatin structure influences rate and spectrum of spontaneous mutations in Neurospora crassa"
 
-This was a fairly large and complex project. I've 
+This was a fairly large and complex project. I've separated the different pipelines, input files, and analyses into different files.
 
 ## Statistical analysis of mutation data
 
