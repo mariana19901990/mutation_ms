@@ -36,3 +36,6 @@ Data files for trinucleotide counts for different regions of the genome
 - File Nc_trinuc_freq_centromere.txt contains trinucleotide counts for centromeric regions
 - File Nc_trinuc_freq_H3K27_exK9.txt contains trinucleotide counts for regions where only H3K27me3 occurs
 - File Nc_trinuc_freq_H3K9.txt contains trinucleotide counts for regions where H3K9me3 occurs
+
+## Data for called sites
+The original data files for the numbers of called sites are very large. The file /data/calledsites.RData contains the number of called sites that has been processed and can be directly loaded into R
