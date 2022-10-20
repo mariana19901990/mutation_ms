@@ -13,8 +13,28 @@ The script files are in folder /bioinf
 3. Consolidate the samples into a databse: file /bioinf/dbimport.sh contains the commands to make the database
 4. Jointly call genotypes from the sample database: file /bioinf/genotypeGVCF_array.sh contains commands to call genotypes jointly, chromsome by chromosome for parallelization purposes
 5. Postprocess the resulting VCF files: file /bioinf/postprocess_vcf.sh
+
+VCF post processing
+ - Extract .gz file
+
+ - Remove INFO.LEAC, INFO:MLEAF columns from vcf file
+	~/bcftools-1.11/bcftools annotate -x INFO/MLEAC,INFO/MLEAF all.samples.vcf -o all.samples.rm.vcf
+
+ - For nat pop also run (PID column too long, and Neurospora is haploid anyway)
+        ~/bcftools-1.11/bcftools annotate -x FORMAT/PID all.samples.rm.vcf -o all.samples.rm2.vcf
+        ~/bcftools-1.11/bcftools annotate -x INFO/MLEAC,INFO/MLEAF,FORMAT/PID all.samples.vcf -o all.samples.natpop_comp.vcf
+
+ - Convert to wormtable database
+
+	vcf2wt --truncate all.samples.rm.vcf allsamples.wt
+	wtadmin add allsamples.wt CHROM+POS
+
+  - Can look what are the contents of wormtable columns with
+        wtadmin show allsamples.wt
+
 6. Then make an indexed database from the resulting VCF file using wormtable
 7. Filter mutations called by the GATK pipeline: file /bioinf/mutations_neuro_MA.py contains a python scripts that uses wormtable to filter for candidate mutations
+
 
 File /bioinf/retrieve.py contains a script that is called from the R-script MAanalysis.R that retrieves the trinucleotide context the mutation. Used the generated wormtable database 
 
