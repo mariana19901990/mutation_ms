@@ -1,6 +1,8 @@
 # mutation_ms
 Data and scripts for manuscript: "Chromatin structure influences rate and spectrum of spontaneous mutations in Neurospora crassa" by Mariana Villalba de la Pena, Pauliina Summanen, Martta Liukkonen, and Ilkka Kronholm
 
+Preprint is available in [bioRxiv](https://doi.org/10.1101/2022.03.13.484164)
+
 This was a fairly large and complex project. I've separated the different pipelines, input files, and analyses into different files.
 
 ## Bioinformatics pipeline to map reads and call mutations
