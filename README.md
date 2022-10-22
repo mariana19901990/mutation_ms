@@ -83,5 +83,15 @@ Data files for trinucleotide counts for different regions of the genome
 The original data files for the numbers of called sites are very large. The file /data/calledsites.RData contains the number of called sites that has been processed and can be directly loaded into R
 
 ## Simulating mutations
-- File create_RMT2 -> Create the RMT file necessary to simulate different mutation rates across the genome. This file is necessary for running "mutation-simulator"
-- File mv_mutation_simmulator -> File that simulates different mutation rate across the genome. First, it simulates higher mutation rate in H3K9 domains. Second it simulates uniformly mutation rate across the genome, and finally it simulates the reads.
+- File /simulation_mutations/create_RMT2.sh This sctipts creates the RMT file necessary to simulate different mutation rates across the genome. This file is necessary for running "mutation-simulator"
+- File /simulation_mutations/mv_mutation_simmulator.sh This script simulates different mutation rate across the genome. First, it simulates higher mutation rate in H3K9 domains. Second it simulates uniformly mutation rate across the genome, and finally it simulates the reads.
+
+## Simulating Structural variants
+- File /simulation_SV/mv_simul.sh This script simulates different number and types of SVs using "survivor"
+- File /simulation_SV/mv_survivor_eval.sh This script evaluates the called SVs on simulated data
+
+## Calling structural variants
+- File /call_SVs/mv_lumpyexpress.sh runs Lumpy on bam files.
+- File /call_SVs/mv_delly.sh runs delly on bam files
+- File /call_SVs/mv_pindel.sh runs pindel on bam files
+- File /call_SVs/mv_svaba.sh runs Svaba on bam files
