@@ -57,6 +57,7 @@ The analysis scripts and data files for estimating the number of mitoses that th
 
 - File curated_mutations_final.csv contains the mutations that occurred in the MA lines. This is the final set of mutations after manual inspection in IGV and Sanger confirmation.
 - File mutationscripts.R contains R scripts that are needed to process some of the mutation data
+- File MAanalysis.R contains R scripts for replicating statistical analyses in the manuscript
 
 Folder /data contains .RData files that contain intermediate steps and results of statistical analyses.
 
