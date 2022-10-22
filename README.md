@@ -81,3 +81,7 @@ Data files for trinucleotide counts for different regions of the genome
 
 ## Data for called sites
 The original data files for the numbers of called sites are very large. The file /data/calledsites.RData contains the number of called sites that has been processed and can be directly loaded into R
+
+## Simulating mutations
+- File create_RMT2 -> Create the RMT file necessary to simulate different mutation rates across the genome. This file is necessary for running "mutation-simulator"
+- File mv_mutation_simmulator -> File that simulates different mutation rate across the genome. First, it simulates higher mutation rate in H3K9 domains. Second it simulates uniformly mutation rate across the genome, and finally it simulates the reads.
