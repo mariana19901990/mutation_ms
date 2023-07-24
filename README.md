@@ -2,6 +2,9 @@
 Data and scripts for manuscript: "Chromatin structure influences rate and spectrum of spontaneous mutations in Neurospora crassa" by Mariana Villalba de la Pena, Pauliina Summanen, Martta Liukkonen, and Ilkka Kronholm
 
 Preprint is available in [bioRxiv](https://doi.org/10.1101/2022.03.13.484164)
+doi: 10.1101/gr.276992.122
+
+The genome sequencing data generated in this study have been submitted to the NCBI BioProject database (https://www.ncbi.nlm.nih.gov/bioproject/) under accession number PRJNA839531. 
 
 This was a fairly large and complex project. I've separated the different pipelines, input files, and analyses into different files.
 
